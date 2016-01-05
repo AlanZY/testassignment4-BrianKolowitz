@@ -8,5 +8,3 @@ deploy:
   api_key:
     secure: $HEROKU_API_KEY #stored in travis-ci
   app: gentle-falls-7496 #matches heroku app name
-  on:
-    repo: BrianKolowitz/testassignment4-BrianKolowitz
