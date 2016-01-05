@@ -27,6 +27,7 @@ public class Main {
             Map<String, Object> attributes = new HashMap<>();
             attributes.put("title", "About Me");
             attributes.put("name", "Brian J Kolowitz");
+            attributes.put("description", "Dr. Kolowitz's Test Site");
 
             return new ModelAndView(attributes, "about.ftl");
         }, new FreeMarkerEngine());
