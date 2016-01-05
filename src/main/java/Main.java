@@ -22,7 +22,7 @@ public class Main {
 
     get("/hello", (req, res) -> "Hello World");
     get("/hi", (req, res) -> "Hi World");
-     
+
     get("/about", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
             attributes.put("title", "About Me");
@@ -33,7 +33,7 @@ public class Main {
 
     get("/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
-            attributes.put("message", "Hello World!");
+            attributes.put("message", "Hello World!!!");
 
             return new ModelAndView(attributes, "index.ftl");
         }, new FreeMarkerEngine());
