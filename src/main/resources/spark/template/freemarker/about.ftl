@@ -7,5 +7,6 @@
     <body>
         <h1>This is the page about ${name}</h1>
         <h3>${description}</h3>
+        <h3>${profession}</h3>
     </body>
     </html>
