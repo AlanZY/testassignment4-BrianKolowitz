@@ -21,6 +21,15 @@ public class Main {
     staticFileLocation("/public");
 
     get("/hello", (req, res) -> "Hello World");
+    get("/hi", (req, res) -> "Hi World");
+     
+    get("/about", (request, response) -> {
+            Map<String, Object> attributes = new HashMap<>();
+            attributes.put("title", "About Me");
+            attributes.put("name", "Brian J Kolowitz");
+
+            return new ModelAndView(attributes, "about.ftl");
+        }, new FreeMarkerEngine());
 
     get("/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
