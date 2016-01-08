@@ -27,7 +27,7 @@ public class Main {
             Map<String, Object> attributes = new HashMap<>();
             attributes.put("title", "About Me");
             attributes.put("name", "Brian J. Kolowitz");
-            attributes.put("description", "Dr. Kolowitz's Test Site.");
+            attributes.put("description", "Dr. Kolowitz's Test Full Stack Site.");
             attributes.put("profession", "Professor");
 
             return new ModelAndView(attributes, "about.ftl");
