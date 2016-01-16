@@ -1,3 +1,3 @@
 $(function () {
-  $('body p').append(" and Javascript!");
+  $('body p').append(" and Javascript!")
 });
