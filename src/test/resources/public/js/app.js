@@ -10,9 +10,9 @@ var App = {
     return max;
   },
   isOdd: function(number) {
-    // if (typeof number !== 'number') {
-    //   throw Error('The given argument is not a number');
-    // }
+    if (typeof number !== 'number') {
+      throw Error('The given argument is not a number');
+    }
     return number % 2 !== 0;
   },
   sortObj: function(array) {
