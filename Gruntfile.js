@@ -8,7 +8,9 @@ module.exports = function(grunt) {
       options: {
         reset: grunt.option('reset') || false,
         stoponerror: false,
-        docType: 'HTML5',
+        failHard: true,
+        generateReport: true,
+        useTimeStamp: true,
         errorHTMLRootDir: 'w3c',
         path: 'w3c/validation-status.json',
         reportpath: 'w3c/validation-report.json',
