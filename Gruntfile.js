@@ -1,5 +1,13 @@
 module.exports = function(grunt) {
   grunt.initConfig({
+    jshint: {
+      files: ['Gruntfile.js', 'src/main/resources/public/js/**/*.js', 'src/test/resources/public/js/**/*.js'],
+      options: {
+        globals: {
+          jQuery: true
+        }
+      }
+    },
     uglify: {
       core: {
         files: [{
@@ -24,7 +32,8 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.registerTask('default', ['uglify', 'cssmin']);
+  grunt.registerTask('default', ['jshint', 'uglify', 'cssmin']);
 };
