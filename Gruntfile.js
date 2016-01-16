@@ -6,14 +6,17 @@ module.exports = function(grunt) {
     distFolder: 'target/classes',
     validation: {
       options: {
-       reset: grunt.option('reset') || false,
-       stoponerror: false,
-       docType: 'HTML5',
-       relaxerror: ['Bad value X-UA-Compatible for attribute http-equiv on element meta.'] //ignores these errors
-   },
-        files: {
-            src: '<%= srcFolder %>/public/**/*.html'
-        }
+        reset: grunt.option('reset') || false,
+        stoponerror: false,
+        docType: 'HTML5',
+        errorHTMLRootDir: 'w3c',
+        path: 'w3c/validation-status.json',
+        reportpath: 'w3c/validation-report.json',
+        relaxerror: ['Bad value X-UA-Compatible for attribute http-equiv on element meta.'] //ignores these errors
+      },
+      files: {
+        src: '<%= srcFolder %>/public/**/*.html'
+      }
     },
     jshint: {
       files: ['Gruntfile.js', '<%= srcFolder %>/public/js/**/*.js', '<%= testFolder %>/public/js/**/*.js'],
