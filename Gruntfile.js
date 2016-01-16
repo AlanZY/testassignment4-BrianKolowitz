@@ -10,9 +10,21 @@ module.exports = function(grunt) {
           ext: '.min.js'
         }]
       }
+    },
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'src/main/resources',
+          src: ['public/stylesheets/**/*.css', '!public/stylesheets/**/*.min.css'],
+          dest: 'target/classes',
+          ext: '.min.css'
+        }]
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.registerTask('default', ['uglify']);
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.registerTask('default', ['uglify', 'cssmin']);
 };
