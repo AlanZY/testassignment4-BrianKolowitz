@@ -4,6 +4,17 @@ module.exports = function(grunt) {
     srcFolder: 'src/main/resources',
     testFolder: 'src/test/resources',
     distFolder: 'target/classes',
+    validation: {
+      options: {
+       reset: grunt.option('reset') || false,
+       stoponerror: false,
+       docType: 'HTML5',
+       relaxerror: ['Bad value X-UA-Compatible for attribute http-equiv on element meta.'] //ignores these errors
+   },
+        files: {
+            src: '<%= srcFolder %>/public/**/*.html'
+        }
+    },
     jshint: {
       files: ['Gruntfile.js', '<%= srcFolder %>/public/js/**/*.js', '<%= testFolder %>/public/js/**/*.js'],
       options: {
@@ -63,6 +74,8 @@ module.exports = function(grunt) {
   });
 
 
+  // grunt.loadNpmTasks('grunt-html-validation');
+  grunt.loadNpmTasks('grunt-w3c-html-validation');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -71,8 +84,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // this would be run by typing "grunt test" on the command line
-  grunt.registerTask('test', ['jshint', 'qunit']);
+  grunt.registerTask('test', ['validation', 'jshint', 'qunit']);
 
   // the default task can be run just by typing "grunt" on the command line
-  grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify', 'cssmin']);
+  grunt.registerTask('default', ['validation', 'jshint', 'qunit', 'concat', 'uglify', 'cssmin']);
 };
