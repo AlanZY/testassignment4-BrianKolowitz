@@ -9,27 +9,31 @@
     function getDataFromServer() {
       return [{
         id: "item-001",
-        value: "green"
+        value: "green",
+        color: #00ff00
       }, {
         id: "item-002",
-        value: "yellow"
+        value: "yellow",
+        color: #ffff00
       }, {
         id: "item-003",
-        value: "blue"
+        value: "blue",
+        color: #0000ff
       }, {
         id: "item-004",
-        value: "purple"
+        value: "purple",
+        color: #ff00ff
       }]
     }
     $(function() {
       var serverData = getDataFromServer();
       var $ul = $("#items");
       for ( key in serverData ) {
-        var $li = $('<li id="' + serverData[key].id + '">' + serverData[key].value + '</li>');        
+        var $li = $('<li id="' + serverData[key].id + '" style="color:' + serverData[key] + '">' + serverData[key].value + '</li>');        
         var $btn = $('<input type="button" value="x" />').click(function(){
           $(this).parent().remove();
-        });        
-        $li.append($btn);        
+        });
+        $li.append($btn);
         $ul.append($li);
       }
     });

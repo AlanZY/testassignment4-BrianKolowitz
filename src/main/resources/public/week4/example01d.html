@@ -9,10 +9,10 @@
     };
     function addItem() {
       var textToAdd = document.getElementById('text-to-add');
-      
+
       var para = document.createElement('p');
       var paraId = uniqueId();
-      para.setAttribute('id', paraId);      
+      para.setAttribute('id', paraId);
       var node = document.createTextNode(textToAdd.value);
       para.appendChild(node);
 
@@ -36,7 +36,8 @@
 </head>
 <body>
   <p>Hello from INFSCI2560</p>
-  <input type="text" id="text-to-add" /><input type="button" onclick="addItem()" value="Add Item" /> <br/>
+  <input type="text" id="text-to-add" />
+  <input type="button" onclick="addItem()" value="Add Item" /> <br/>
   <div id="div1">
 
   </div>

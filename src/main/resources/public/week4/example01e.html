@@ -11,8 +11,8 @@
     function addItem() {
       var textToAdd = $('#text-to-add').val();
       var paraId = uniqueId();
-      
-      var $content = $('#div1');     
+
+      var $content = $('#div1');
       $content.append('<p id="' + paraId + '">' + textToAdd + '</p>');
       var $btn = $('<input type="button" value="x" />');
       $btn.click(function() { removeItem(this, paraId); });
@@ -28,7 +28,12 @@
   <p>Hello from INFSCI2560</p>
   <input type="text" id="text-to-add" /><input type="button" onclick="addItem()" value="Add Item" /> <br/>
   <div id="div1">
-
+    <ul>
+      <li>
+        <span>text</span>
+        <input type="button" value="x"/>
+      </li>
+    </ul>
   </div>
 </body>
 </html>
