@@ -11,7 +11,7 @@ public class Main {
     staticFileLocation("/public");
 
     //new JavaGettingStarted();
-    Object r = new Week6Routes();
+    Object r = new Week7Routes();
   }
 
 }

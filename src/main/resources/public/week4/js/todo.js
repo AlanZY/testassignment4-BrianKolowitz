@@ -1,19 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @BrianKolowitz
- Watch 1,691
-  Star 23,989
- Fork 5,362 jashkenas/backbone
- Code  Issues 25  Pull requests 30  Wiki  Pulse  Graphs
-Branch: master Find file Copy pathbackbone/examples/todos/todos.js
-fc19ee3  on Aug 17, 2015
-@akre54 akre54 fix localStorage link
-13 contributors @jashkenas @braddunbar @akre54 @gsamokovarov @jcoglan @fancyoung @lorensr @yuku-t @danielnixon @hbu50 @liquid @willmoffat @addyosmani
-RawBlameHistory     235 lines (183 sloc)  6.55 KB
 // An example Backbone application contributed by
 // [Jérôme Gravel-Niquet](http://jgn.me/). This demo uses a simple
 // [LocalStorage adapter](backbone.localStorage.html)
@@ -248,5 +232,3 @@ $(function(){
   var App = new AppView;
 
 });
-Status API Training Shop Blog About Pricing
-© 2016 GitHub, Inc. Terms Privacy Security Contact Help
