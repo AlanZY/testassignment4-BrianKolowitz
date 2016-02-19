@@ -40,7 +40,7 @@ public class JavaGettingStarted {
             return new ModelAndView(attributes, "index.ftl");
         }, new FreeMarkerEngine());
 
-    get("/db", (req, res) -> {
+    get("/db.html", (req, res) -> {
       Connection connection = null;
       Map<String, Object> attributes = new HashMap<>();
       try {
