@@ -11,10 +11,10 @@
         <script>
             $(function () {
                 $.ajax({
-                    url: "/api/time/now", 
+                    url: "/api/time/now",
                     success: function (result) {
-                        var data = JSON.parse(result);
-                        $("#current-time").html(data.currentTime);
+                        var data = eval(result);
+                        $("#current-time").html(result);
                     }});
             });
         </script>
