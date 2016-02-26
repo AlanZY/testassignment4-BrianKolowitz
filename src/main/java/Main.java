@@ -10,8 +10,10 @@ public class Main {
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
-    //new JavaGettingStarted();
-    Object r = new Week7Routes();
+    //Object r = new JavaGettingStarted();
+    //Object r = new Week6Routes();
+    //Object r = new Week7Routes();
+    Object r = new Week8Routes();
   }
 
 }

@@ -13,7 +13,7 @@
                 $.ajax({
                     url: "/api/time/now",
                     success: function (result) {
-                        var data = eval(result);
+                        var data = JSON.parse(result);
                         $("#current-time").html(result);
                     }});
             });
