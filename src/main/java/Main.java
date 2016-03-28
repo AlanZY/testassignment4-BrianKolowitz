@@ -13,7 +13,8 @@ public class Main {
     //Object r = new JavaGettingStarted();
     //Object r = new Week6Routes();
     //Object r = new Week7Routes();
-    Object r = new Week8Routes();
+    Object r = new Student1ProjectRoutes();
+    
   }
 
 }
