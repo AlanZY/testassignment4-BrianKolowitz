@@ -67,7 +67,8 @@ public class Sql2oModel implements Model {
         try (Connection conn = sql2o.open()) {
             List<Post> posts = conn.createQuery("select * from posts")
                     .executeAndFetch(Post.class);
-            posts.forEach((post) -> post.setCategories(getCategoriesFor(conn, post.getPost_uuid())));
+            posts.forEach((post) -> post.setCategories(
+                    getCategoriesFor(conn, post.getPost_uuid())));
             return posts;
         }
     }
